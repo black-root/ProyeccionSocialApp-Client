@@ -13,11 +13,13 @@ export class UserFormComponent implements OnInit {
 
   constructor(private dataService: DataService) {
     this.usuario = new Usuario('Iker', 'Casillas', 'brayan.casillas1996@gmail.com', '1234', new RolUsuario(1) );
-    console.log(this.usuario);
+  //  console.log(this.usuario);
   }
 
   ngOnInit(): void {
-    this.dataService.updateUser(this.usuario, 54);
+   // this.dataService.updateUser(this.usuario, 54);
+  this.dataService.getAllUsers();
+ //this.dataService.deleteUser(53);
   }
 
 }
